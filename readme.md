@@ -15,12 +15,12 @@ Debes tener instalado en tu sistema:
 ```bash
 git clone https://github.com/fernabe/biblioteca
 ```
-Crear el archivo .env
+- Crear el archivo .env
 ```bash
 cd proyecto
 cp .env.example .env
 ```
-Configurar el archivo .env de la siguiente manera:
+- Configurar el archivo .env de la siguiente manera:
 ```bash
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -29,30 +29,51 @@ DB_DATABASE=biblioteca
 DB_USERNAME=root
 DB_PASSWORD=
 ```
-Una vez creado el archivo .env, crear en el servidor local una base de datos con el nombre biblioteca.
+Debes cambiar el nombre de usuario y password en caso de que tengas otros diferentes para acceder al servidor.
+Dentro del archivo .env tambien configuraremos el envio de mails para un entorno de desarrollo local:
+```bash
+MAIL_DRIVER=log
+MAIL_HOST=null
+MAIL_PORT=null
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+```
+Una vez creado el archivo .env y configurado el archivo .env, crear en el servidor local una base de datos con el nombre biblioteca.
 
-Composer install
+- Composer install:
+```bash
 composer install
-Generar clave
+```
+- Generar clave:
+```bash
 php artisan key:generate
-Migraciones y seeders
+```
+- Migraciones y seeders:
+```bash
 composer dump-autoload
 php artisan migrate
 php artisan db:seed
+```
 Una vez realizados estos pasos, arrancamos un servidor local
-
+```bash
 php artisan serve
+```
 Acceso administrador:
-
+```bash
 http://localhost:8000/admin
+```
 Credenciales:
-
+```bash
 user: superadmin@labiblioteca.com
 password: superadmin
+```
 Acceso usuario:
-
+```bash
 http://localhost:8000
+```
 Credenciales:
-
+```bash
 user: usuario@gmail.com
 password: usuario
+```
