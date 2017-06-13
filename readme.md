@@ -17,7 +17,7 @@ git clone https://github.com/fernabe/biblioteca
 ```
 - Crear el archivo .env
 ```bash
-cd proyecto
+cd biblioteca
 cp .env.example .env
 ```
 - Configurar el archivo .env de la siguiente manera:
