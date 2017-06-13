@@ -12570,7 +12570,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         filtrarObjetos: function filtrarObjetos() {
 
             this.hayCoincidencias = true;
-            var cadena = this.filtro.toLowerCase();
+            var cadena = this.limpiarTildes(this.filtro.toLowerCase());
 
             var objetosFiltro = [];
 
@@ -12582,7 +12582,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 for (var j = 0; j < this.camposFiltro.length && a; j++) {
 
                     var col = this.camposFiltro[j];
-                    if (objeto[col].toLowerCase().indexOf(cadena) != -1) {
+                    if (this.limpiarTildes(objeto[col]).toLowerCase().indexOf(cadena) != -1) {
                         objetosFiltro.push(objeto);
                         a = false;
                     }
@@ -12594,6 +12594,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 this.hayCoincidencias = false;
             }
             this.setNumeroPaginas(objetosFiltro.length);
+        },
+        limpiarTildes: function limpiarTildes(cadena) {
+            cadena = cadena.replace(/á/gi, "a");
+            cadena = cadena.replace(/é/gi, "e");
+            cadena = cadena.replace(/í/gi, "i");
+            cadena = cadena.replace(/ó/gi, "o");
+            cadena = cadena.replace(/ú/gi, "u");
+
+            return cadena;
         }
     }
 });
@@ -14814,7 +14823,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         filtrarObjetos: function filtrarObjetos() {
 
             this.hayCoincidencias = true;
-            var cadena = this.filtro.toLowerCase();
+            var cadena = this.limpiarTildes(this.filtro.toLowerCase());
 
             var objetosFiltro = [];
 
@@ -14826,7 +14835,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 for (var j = 0; j < this.camposFiltro.length && a; j++) {
 
                     var col = this.camposFiltro[j];
-                    if (objeto[col].toLowerCase().indexOf(cadena) != -1) {
+                    if (this.limpiarTildes(objeto[col]).toLowerCase().indexOf(cadena) != -1) {
                         objetosFiltro.push(objeto);
                         a = false;
                     }
@@ -14838,6 +14847,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 this.hayCoincidencias = false;
             }
             this.setNumeroPaginas(objetosFiltro.length);
+        },
+        limpiarTildes: function limpiarTildes(cadena) {
+            cadena = cadena.replace(/á/gi, "a");
+            cadena = cadena.replace(/é/gi, "e");
+            cadena = cadena.replace(/í/gi, "i");
+            cadena = cadena.replace(/ó/gi, "o");
+            cadena = cadena.replace(/ú/gi, "u");
+
+            return cadena;
         }
     }
 });
