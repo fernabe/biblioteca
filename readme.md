@@ -11,8 +11,11 @@ Debes tener instalado en tu sistema:
 
 ## Pasos a realizar:
 
-Clonar el repositorio
-git clone https://github.com/fernabe/proyecto
+- Clonar el repositorio
+´´´bash
+git clone https://github.com/fernabe/biblioteca
+´´´
+
 Crear el archivo .env
 cd proyecto
 cp .env.example .env
