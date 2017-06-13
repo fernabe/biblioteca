@@ -39,7 +39,7 @@ MAIL_USERNAME=null
 MAIL_PASSWORD=null
 MAIL_ENCRYPTION=null
 ```
-Una vez creado el archivo .env y configurado el archivo .env, crear en el servidor local una base de datos con el nombre biblioteca.
+Una vez creado el archivo .env y configurado el archivo .env, crear en el servidor local una base de datos con el nombre biblioteca, o el que le hayas dado en el archivo .env.
 
 - Composer install:
 ```bash
