@@ -13,7 +13,7 @@ Debes tener instalado en tu sistema:
 
 - Clonar el repositorio
 ```bash
-git clone https://github.com/fernabe/biblioteca
+git clone https://github.com/fernabe/biblioteca.git
 ```
 - Crear el archivo .env
 ```bash
