@@ -12,13 +12,23 @@ Debes tener instalado en tu sistema:
 ## Pasos a realizar:
 
 - Clonar el repositorio
-´´´bash
+```bash
 git clone https://github.com/fernabe/biblioteca
-´´´
-
+```
 Crear el archivo .env
+```bash
 cd proyecto
 cp .env.example .env
+```
+Configurar el archivo .env de la siguiente manera:
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=biblioteca
+DB_USERNAME=root
+DB_PASSWORD=
+```
 Una vez creado el archivo .env, crear en el servidor local una base de datos con el nombre biblioteca.
 
 Composer install
