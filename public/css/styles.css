@@ -1,0 +1,153 @@
+ 
+ *{
+  margin: 0;
+  padding: 0;
+}
+
+ html,body{
+  height:100%;
+}  
+/* Div que engloba el contenido de la página menos el footer */
+.wrapper{
+  min-height:100%;
+  background: #FBF5EF; 
+}
+
+section{
+  overflow: auto;
+  /* Definimos el padding inferior:
+  50px del pie de pagina mas 10px de separacion
+  */
+  padding-bottom: 40px;
+  /* Definimos un padding superior */     
+}
+
+footer{
+  position: relative;
+  /* Altura total del footer en px con valor negativo */
+  margin-top: -60px;
+  /* Altura del footer en px. Se han restado los 5px del margen
+  superior mas los 5px del margen inferior
+  */
+  height: 60px;
+  padding: 15px 0px;
+  clear: both;
+  background:#f5f8fa;
+  /*text-align: center;*/
+  color: #000;
+  z-index: 1;
+  box-shadow: 0px 0px 5px #888888;
+}
+
+
+/**Estilos barra de navegacion**/
+.navbar{
+  margin-bottom: 0px; 
+  box-shadow: 0px 0px 5px #888888;
+}
+.tabs{
+  padding-top: 20px;
+}
+
+/* para colocar el simbolo de la lupa en la caja de texto*/
+
+.contenido-tab {
+    width:100%;
+    padding-top: 30px;
+    padding-bottom: 15px; 
+}
+.buscador{
+    padding-bottom: 15px; 
+}
+
+.boton-buscar{
+    margin-bottom: 5px;
+}
+.inner-addon {
+  position: relative;
+}
+
+
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+/*****************************************************/
+
+
+tbody tr:nth-child(even) { background: #f5f8fa}
+tbody tr:nth-child(odd) { background: #fff}
+
+.cabecera-tabla{
+  background-color:  #c0ddec;
+}
+    
+tbody{
+  border-bottom: 1px solid #000;
+}
+
+
+/*Sobreescribimos estilos de bootstrap*/
+.nav-tabs li a{
+  color: #666;
+  font-size: 22px;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #555555;
+  background-color: #fff;
+  border-top: 3px solid orange;
+  border-left: 1px solid #ddd;
+  border-right: : 1px solid #ddd;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+
+.nav-tabs > li > a:hover {
+  color:orange;
+  border-color: transparent;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: #fff;
+}
+
+.pagination{
+  margin: 0px;
+}
+
+.titulo-objetos h2:first-letter{
+  text-transform: capitalize;
+}
+
+.titulo-objetos{
+  margin-top: 40px;
+
+}
+
+.nav-pills > li > a{
+  margin-bottom: 10px;
+  background-color: #c0ddec;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) { 
+  .nav-tabs li a{
+    font-size: 20px;
+  }
+}
